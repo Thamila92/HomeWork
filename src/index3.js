@@ -1,5 +1,4 @@
-// Importez les modules nécessaires depuis vos fichiers
-import * as drawlib from "./drawlib.js";
+ import * as drawlib from "./drawlib.js";
 import { get2DContextById } from "./drawlib.js";
 
 import * as color from "./color.js";
@@ -53,8 +52,7 @@ const sheep2 = createSheep(250, 300);
 
 
  
-// Appel de la fonction principale pour afficher les formes sur le canvas
-function main() {
+ function main() {
   const context = get2DContextById("canvas");
   drawlib.renderCentered(tree1, context);
   drawlib.renderCentered(tree2, context);
@@ -65,5 +63,4 @@ function main() {
   
 }
 
-// Appel de la fonction principale
-main();
+ main();

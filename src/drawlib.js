@@ -193,9 +193,7 @@ function renderPolygon(color, points, context) {
  * @param {CanvasRenderingContext2D} context
  */
 function renderSquare(color, xCenter, yCenter, side, context) {
-  // Note: we could have used `context.rect` but the following
-  // code will be more easily translatable to draw polygon
-  // (see part 2 of the homework)
+ 
   const path = new Path2D();
   const halfSide = side / 2;
   path.moveTo(xCenter - halfSide, yCenter - halfSide);
