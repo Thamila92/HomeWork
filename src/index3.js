@@ -3,9 +3,14 @@ import { get2DContextById } from "./drawlib.js";
 
 import * as color from "./color.js";
 
- const TREE_COLOR = color.green;
+ 
+
+
+const TREE_COLOR = color.green;
 const LEAF_COLOR = color.darkGreen;
 const SHEEP_COLOR = color.black;
+const SHEEP_HEAD = color.black;
+
 
 
  // @ts-ignore
@@ -26,10 +31,10 @@ function createTree(x, y) {
   const body = drawlib.circle(SHEEP_COLOR, 20);
   console.log(`Body: ${body}`);
 
-  const head = drawlib.circle(SHEEP_COLOR, 15);
+  const head = drawlib.circle(SHEEP_HEAD, 15);
   console.log(`Head: ${head}`);
 
-  const legs = drawlib.rectangle(color.white, 5, 20);
+  const legs = drawlib.rectangle(color.black, 5, 20);
   console.log(`Legs: ${legs}`);
 
   const sheep = drawlib.group([
@@ -54,6 +59,8 @@ const sheep2 = createSheep(250, 300);
  
  function main() {
   const context = get2DContextById("canvas");
+  context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+
   drawlib.renderCentered(tree1, context);
   drawlib.renderCentered(tree2, context);
   drawlib.renderCentered(tree3, context);
